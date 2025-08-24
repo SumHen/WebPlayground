@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Playground</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closebrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closetag.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/html-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/css-hint.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/javascript-hint.min.js"></script>
+</head>
+<body>
+  <h1>🌐 Code Playground</h1>
+
+
+  <div id="editor">
+    <div class="editor-pane" id="htmlPane">
+      <label for="htmlCode">HTML</label>
+      <textarea id="htmlCode"></textarea>
+    </div>
+
+    <div class="editor-pane" id="cssPane">
+      <label for="cssCode">CSS</label>
+      <textarea id="cssCode"></textarea>
+    </div>
+    
+    <div class="editor-pane" id="jsPane">
+      <label for="jsCode">JS</label>
+      <textarea id="jsCode"></textarea>
+    </div>
+  </div>
+
+
+  <button id="runBtn">▶ Run Code</button>
+
+  <!-- Mobile Tabs -->
+  <div id="mobileTabs" class="mobile-only">
+    <button data-tab="html">HTML</button>
+    <button data-tab="css">CSS</button>
+    <button data-tab="js">JS</button>
+    <button id="runBtnMobile">▶ Run</button>
+  </div>
+
+
+  <div id="preview_container">
+    <iframe id="preview"></iframe>
+    <button id="exitPreview" class="hidden">✖ Exit</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
